@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellogin</title>
+</head>
+<body>
+    <h1>Vamos logar!!!</h1>
+    <!-- {{ form.username }} -->
+    <form action="send-form", method="POST">
+        {{ form.csrf_token }}
+        <fieldset id="usuario">
+            <legend>Form Example</legend>
+
+        <p>
+            <label for="username">Username
+            <input type="text" id="username" name="username" placeholder="Usuario" required></label>
+        </p>
+            
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </p>
+
+        <p>
+            <label for="remember_me">Remember me?</label>
+            <input type="checkbox" id="remember_me" name="remember_me" required>
+        </p>
+        </fieldset>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

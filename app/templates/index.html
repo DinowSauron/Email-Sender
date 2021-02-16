@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Preencha os dados</h1>
+        <form action="sendForm" method="POST">
+            <fieldset id="user">
+                <legend>Identificação</legend>
+                <label for="name">Nome:
+                    <input id="name" name="name" type="text" placeholder="Seu nome aqui" required>
+                </label>
+                <label for="email">Email:
+                    <input id="email" name="email" type="email" placeholder="Digite seu email" required>
+                </label>
+                <label for="tel">Telefone:
+                    <input id="tel" name="tel" type="tel" placeholder="Digite seu Telefone" required>
+                </label>
+            </fieldset>
+
+            <fieldset id="info">
+                <legend>Endereço</legend>
+                <label for="country">País:
+                    <input id="country" name="country" type="text" placeholder="Digite seu País" required>
+                </label>
+                <label for="state">Estado:
+                    <input id="state" name="state" type="text" placeholder="Digite seu Estado" required>
+                </label>
+                <label for="city">Cidade:
+                    <input id="city" name="city" type="text" placeholder="Digite sua Cidade" required>
+                </label>
+                
+                <label for="log">Logradouro:
+                    <input id="log" name="log" type="text" placeholder="Rua, Av, Trav..." required>
+                </label>
+                <label for="num">Número:
+                    <input id="num" name="num" type="number" placeholder="Digite o número da sua residência" required>
+                </label>
+            </fieldset>
+
+            <fieldset id="subject">
+                <label for="about">Assunto:
+                    <input id="about" name="about" type="text" placeholder="Insira o assunto da sua mensagem...">
+                </label>
+                <label for="message">Mensagem:
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </label>
+            </fieldset>
+            <button type="submit">Enviar Formulário</button>
+        </form>
+    </div>
+    <footer>
+        <p>
+            Luiz Claudio &copy 2020
+        </p>
+    </footer>
+</body>
+</html>

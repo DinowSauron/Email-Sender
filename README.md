@@ -1,0 +1,3 @@
+# Email Sender
+
+uma maneira simples para enviar email com python...
