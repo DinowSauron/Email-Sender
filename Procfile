@@ -1,1 +1,1 @@
-web: bundle exec bin/rails server -p $PORT
+web: gunicorn run:app
