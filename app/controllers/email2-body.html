@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Realizado Com Sucesso!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;700&display=swap');
+
+        html {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans HK", sans-serif;
+            background-color: #e6e6e6;
+        }
+
+        .email-background {
+            background-color: #e6e6e6;
+            padding: 10px;
+        }
+        
+        .email-container,
+        .pre-header {
+            background-color: #fff;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        table{
+            width: 80vw;
+            max-width: 650px;
+            margin: auto;
+        }
+        tr{
+            background-color: #fff;
+        }
+        .pre-header {
+            display: none;
+            background-color: #e6e6e6;
+            color: #e6e6e6;
+            font-size: 1px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p {
+            font-size: 10pt;
+            margin: 5px 10px;
+        }
+        h2{
+            font-size: 18px;
+            margin: 5px 10px;
+        }
+
+        .center {
+            display: block !important;
+            text-align: center;
+            text-justify: center;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 20px;
+        }
+
+        a.box{
+            display: inline-block;
+            text-decoration: none;
+            background-color: #0066FF;
+            padding: 10px 20px;
+            color: #FFF
+        }
+        .data p{
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        th h1{
+            font-size: 20pt;
+            text-align: left;
+            margin: 5px 10px;
+        }
+        td.space{
+            background-color: #e6e6e6;
+            height: 5px;
+        }
+
+        pre{
+            display: block;
+            margin: 10px;
+            margin-bottom: 50px;
+            max-width: 500px;
+            word-wrap: normal;
+            font-size: 10pt;
+            white-space: pre-wrap;       /* Since CSS 2.1 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        }
+        .footer{
+            text-align: center;
+            font-size: 8pt;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="email-background">
+        <tr>
+            <td colspan="3" class="pre-header">
+                <p>
+                    Um Novo Email Foi Cadastrado Com Sucesso!
+                </p>
+            </td>
+            
+            <td colspan="3" class="email-container">
+
+                <a href="https://templates.mailchimp.com/resources/inline-css/" class="box center">
+                    <img src="https://raw.githubusercontent.com/DinowSauron/dinowsauron.github.io/main/public/pictures/Logo_300.png"
+                        alt="">
+                </a>
+
+                <p><strong>Cadastro Realizado Com Sucesso!</strong></p>
+                <p>Observe que este email se trata apenas de um exemplo de registro via email utilizando o nodemailer</p>
+               
+            </td>
+            
+        </tr>
+
+        <tr><td colspan="3" class="space"></td></tr>
+        <tr>
+            <th colspan="3">
+                <h1>Informações Do Cadastro:</h1>
+            </th>
+        </tr>
+
+        <tr class="data">
+            <td colspan="2">
+                <h2>
+                    Nome:
+                </h2>
+                <p>{form['name']}</p>
+            </td>
+            <td>
+                <h2>
+                    Email:
+                </h2>
+                <p>{form['email']}</p>
+            </td>
+        </tr>
+        <tr class="data">
+            <td>
+                <h2>
+                    Telefône:
+                </h2>
+                <p>{form['tel']}</p>
+            </td>
+            <td>
+                <h2>
+                    Celular:
+                </h2>
+                <p>(XX) XX XXXX-XXXX</p>
+            </td>
+            <td>
+                <h2>
+                    Skype:
+                </h2>
+                <p><a href="skype:skypeUser?chat">SkypeUser</a></p>
+            </td>
+        </tr>
+        
+        <tr><td colspan="3" class="space"></td></tr>
+        
+        <tr>
+            <th colspan="3">
+                <h1>Endereço:</h1>
+            </th>
+        </tr>
+        <tr class="data">
+            <td>
+                <h2>
+                    País:
+                </h2>
+                <p>{form['country']}</p>
+            </td>
+            <td>
+                <h2>
+                    Estado:
+                </h2>
+                <p>{form['state']}</p>
+            </td>
+            <td>
+                <h2>
+                    Cidade:
+                </h2>
+                <p>{form['city']}</p>
+            </td>
+        </tr>
+        <tr class="data">
+            <td colspan="2">
+                <h2>
+                    Logradouro:
+                </h2>
+                <p>{form['log']}</p>
+            </td>
+            <td>
+                <h2>
+                    Número:
+                </h2>
+                <p>Nº: {form['num']}</p>
+            </td>
+        </tr>
+
+        <tr><td colspan="3" class="space"></td></tr>
+        
+        <tr>
+            <th colspan="3">
+                <h1>Mensagem:</h1>
+            </th>
+        </tr>
+        <tr class="data">
+            <td colspan="3">
+                <h2>
+                    Assunto:
+                </h2>
+                <p>{form['about']}</p>
+                
+                <h2>
+                    Mensagem:
+                </h2>
+                <pre>{form['message']}</pre>
+            </td>
+        </tr>
+
+
+        <tr><td colspan="3" class="space"></td></tr>
+        <tr><td colspan="3" class="space"></td></tr>
+        <tr>
+            <td colspan="3" class="footer">
+                <p>Baixe o arquivo no anexo para obter mais detalhes sobre o cadastro!</p>
+                <p>Todas as informações foram entregue como foram preenchidas, não havendo nenhum tratamento de texto/mensagem/conteúdo com o objetivo de manter a originalidade da resposta/nome/email enviados.</p>
+                <p class="version">Version 1.2.0</p>
+                <br>
+                <p><a class="box" href="https://github.com/DinowSauron/Email-Sender">GitHub</a> <a class="box" href="https://email-sender-python.herokuapp.com/">WebPage</a></p>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

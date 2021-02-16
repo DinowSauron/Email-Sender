@@ -1,18 +1,22 @@
-# ([('name', 'Luiz Claudio'), ('email', 'luiz.deadzone@gmail.com'), ('tel', '(21) 5555-5555'), ('country', 'Brasil'), 
-# ('state', 'RJ'), ('city', 'Rio de Janeiro'), ('log', 'Rua aqui de casa'), ('num', '223'), ('about', 'Minha pesquisa'), 
-# ('message', 'aabbcc')]
 import os
 from flask_mail import Message
 from app import mail
+from app.controllers.email_constructor import *
+from app.controllers.text_constructor import *
 
 def Send(form):
     try:
-        print(os.environ.get("MAIL_USERNAME"))
-        print(os.environ.get("MAIL_PASSWORD"))
-        print(form['email'])
-        msg = Message("Hello", sender=os.environ.get("MAIL_USERNAME"), recipients = [form['email']])
-        msg.body = "Hello, i'm body!"
+        print("[BOT] Eniciando Envio De Email...")
+        
+        msg = Message("Cadastro Realizado Com Sucesso!",
+                      sender=os.environ.get("MAIL_USERNAME"),
+                      recipients = [form['email']])
+        
+        msg.html = GetHtml(form)
+        msg.attach(f"Cadastro_{(form['name'] + '').replace(' ', '-')}.txt", "txt/text",
+                   GetText(form))
         mail.send(msg)
+        print('[BOT] Email enviado!')
         return True
     except Exception as e:
         print(f"Error Detected: {e}")

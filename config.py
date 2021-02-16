@@ -11,4 +11,4 @@ MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 MAIL_USE_TLS = True
 MAIL_USE_SSL = False
 
-SECRET_KEY = os.environ.get("MAIL_PASSWORD")
+SECRET_KEY = os.environ.get("KEY")
