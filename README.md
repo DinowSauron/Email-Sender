@@ -26,11 +26,12 @@ Visite o site hospedado na Heroku:
 * Instalar os arquivos: pip install -r requirements.txt
 * Gerar os requirimentos, caso mude eles: pip freeze > requirements.txt
 * No seu Email.
-    * Permitir aplicativos menos seguors.
-    * Desabilitar o captcha: https://accounts.google.com/b/0/DisplayUnlockCaptcha
+    * Habilitar verificação em duas etapas.
+    * Ir em segurança e criar uma senha de app, para o E-mail.
 * Colocar o arquivo `.env` com as variaveis de ambiente.
     * MAIL_USERNAME: str
     * MAIL_PASSWORD: str
+    * MAIL_PORT: int (exemplo: 587)
     * TIMEZONE: int
     * KEY: str (qualquer key, invente uma...)
 

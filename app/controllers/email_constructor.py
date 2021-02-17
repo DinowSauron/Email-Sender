@@ -4,6 +4,7 @@
 def GetHtml(form):
     
     print("[BOT] Gerando HTML...")
+    
     return f"""
 <table class="email-background" style="width: 80vw;max-width: 650px;margin: auto;background-color: #e6e6e6;padding: 10px;">
     <tr style="background-color: #fff;">
@@ -13,9 +14,12 @@ def GetHtml(form):
             </p>
         </td>
         
+    </tr>
+    <tr style="background-color: #fff;">
+    
         <td colspan="3" class="email-container" style="background-color: #fff;overflow: hidden;border-radius: 5px;">
 
-            <a href="https://templates.mailchimp.com/resources/inline-css/" class="box center" style="text-align: center;text-justify: center;display: block !important;text-decoration: none;background-color: #0066FF;padding: 10px 20px;color: #FFF;">
+            <a href="https://github.com/DinowSauron" class="box center" style="text-align: center;text-justify: center;display: block !important;text-decoration: none;background-color: #0066FF;padding: 10px 20px;color: #FFF;">
                 <img src="https://raw.githubusercontent.com/DinowSauron/dinowsauron.github.io/main/public/pictures/Logo_300.png" alt="" style="max-width: 100%;">
             </a>
 
@@ -140,7 +144,7 @@ def GetHtml(form):
             <p style="font-size: 10pt;margin: 5px 10px;">Todas as informações foram entregue como foram preenchidas, não havendo nenhum tratamento de texto/mensagem/conteúdo com o objetivo de manter a originalidade da resposta/nome/email enviados.</p>
             <p class="version" style="font-size: 10pt;margin: 5px 10px;">Version 1.2.0</p>
             <br>
-            <p style="font-size: 10pt;margin: 5px 10px;"><a class="box" href="https://github.com/DinowSauron/Email-Register-Receiver" style="display: inline-block;text-decoration: none;background-color: #0066FF;padding: 10px 20px;color: #FFF;">GitHub</a> <a class="box" href="https://mail-register.herokuapp.com/" style="display: inline-block;text-decoration: none;background-color: #0066FF;padding: 10px 20px;color: #FFF;">WebPage</a></p>
+            <p style="font-size: 10pt;margin: 5px 10px;"><a class="box" href="https://github.com/DinowSauron/Email-Sender" style="display: inline-block;text-decoration: none;background-color: #0066FF;padding: 10px 20px;color: #FFF;">GitHub</a> <a class="box" href="https://email-sender-python.herokuapp.com/" style="display: inline-block;text-decoration: none;background-color: #0066FF;padding: 10px 20px;color: #FFF;">WebPage</a></p>
         </td>
     </tr>
 

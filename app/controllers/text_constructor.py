@@ -2,8 +2,8 @@ from datetime import datetime, timezone, timedelta
 import os
 
 def GetText(form):
-    diference = timedelta(hours=int(os.environ.get("TIMEZONE")))
-    data = datetime.now().astimezone(timezone(diference))
+    zone = timezone(timedelta(hours=int(os.environ.get("TIMEZONE"))))
+    data = datetime.now().astimezone(zone)
     def GetDate():
         return data.strftime("%d/%m/%Y")
     
